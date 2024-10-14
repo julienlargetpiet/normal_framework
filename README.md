@@ -238,7 +238,7 @@ Graphic output of `rnorm`:
 
 <img src = "rnormc.jpg">
 
-## Unusuals shape
+## Unusual shapes
 
 ### Example 4
 
