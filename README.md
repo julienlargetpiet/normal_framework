@@ -64,8 +64,8 @@ The first sub function equals to `580 + Cnt ** 1.3`
 
 The second sub function equals to `0.25`
 
-
-`x <- normal_gen1(n_inpt = 5000,
+<code>
+x <- normal_gen1(n_inpt = 5000,
                   mean_inpt = 100,
                   sd_inpt = 98,
                   offset_proba = 0.001,
@@ -108,7 +108,7 @@ summary(x)
 
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 -253.77   37.59  102.62  102.04  166.58  446.79 
-`
+</code>
 
 Graphic output of `normal_gen1`:
 
@@ -124,8 +124,8 @@ The first sub function equals to `Cnt ** 1.3`
 
 The second sub function equals to `0.05`
 
-
-`x <- normal_gen1(n_inpt = 5000,
+<code>
+x <- normal_gen1(n_inpt = 5000,
                   mean_inpt = 100,
                   sd_inpt = 2,
                   offset_proba = 0.001,
@@ -168,7 +168,7 @@ summary(x)
 
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
   93.06   98.65  100.02  100.01  101.33  108.63 
-`
+</code>
 
 Graphic output of `normal_gen1`:
 
@@ -184,8 +184,8 @@ The first sub function equals to `Cnt ** 1.3`
 
 The second sub function equals to `0.05`
 
-
-`x <- normal_gen1(n_inpt = 5000,
+<code>
+x <- normal_gen1(n_inpt = 5000,
                   mean_inpt = 100,
                   sd_inpt = 52,
                   offset_proba = 0.001,
@@ -228,7 +228,7 @@ summary(x)
 
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
  -86.88   65.31  101.08  100.74  135.67  282.69 
-`
+</code>
 
 Graphic output of `normal_gen1`:
 
@@ -246,8 +246,8 @@ The first sub function equals to `Cnt ** 1.3`
 
 The second sub function equals to `0.05`
 
-
-`x <- normal_gen1(n_inpt = 5000,
+<code>
+x <- normal_gen1(n_inpt = 5000,
                   mean_inpt = 100,
                   sd_inpt = 52,
                   offset_proba = 0.001,
@@ -290,7 +290,7 @@ summary(x)
 
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
  -86.88   65.31  101.08  100.74  135.67  282.69 
-`
+</code>
 
 Graphic output of `normal_gen1`:
 
