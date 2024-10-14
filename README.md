@@ -300,5 +300,10 @@ Graphic output of `rnorm`:
 
 <img src = "rnormc.jpg">
 
+# Conclusion
+
+Play with the `sub functions` to shape the normal distribution.
+
+
 
 
