@@ -54,9 +54,17 @@ These algorithms can be a lot **faster** (or slower) depending on the `sub funct
 At the row `21` of the file `gen1.R`, you will find a divider value (make sure to fill it before running the algorithm).
 This value is in fact a chosen **function** which takes as a variable **`Cnt`** (which is a loop counter).
 
-The same thing can be said about the second sub function at row `48`. 
+This **function** must be strictly decreasing. You choose the speed / how it will decrease to modulate the shape of your normal distribution respecting your mean and standard deviation. Look at the following examples comparing the built-in function in `R` (`rnorm`) and `normal_gen1`:
 
-The **function** must be strictly decreasing. You choose the speed / how it will decrease to modulate the shape of your normal distribution respecting your mean and standard deviation. Look at the following examples comparing the built-in function in `R` (`rnorm`) and `normal_gen1`:
+The same thing can be said about the second sub function, apart that this one must be strictly increasing, at row `48`. 
+
+### Explanations
+
+The outputed normal distribution is made of multiples normal distribution having a standard deviation of 1.
+
+In fact the first sub function describes how the amount of values that are generated for each normal distribution (always having a standard deviation of 1), at a mean that progressively deviates from `mean_inpt`, evolves.
+
+The second sub function describes how the mean of the multiples normal distribution (always having a standard deviation of 1), evolves.
 
 ### Example 1
 
@@ -300,10 +308,69 @@ Graphic output of `rnorm`:
 
 <img src = "rnormc.jpg">
 
+### Example 5
+
+The first sub function equals to `Cnt ** 1.3`
+
+The second sub function equals to `0.35`
+
+<code>
+x <- normal_gen1(n_inpt = 5000,
+                  mean_inpt = 100,
+                  sd_inpt = 58,
+                  offset_proba = 0.001,
+                  low_del = 0,
+                  accuracy = 0.2)
+
+length(x)
+
+[1] 1569
+
+sd(x)
+
+[1] 57.85259
+
+summary(x)
+
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ -85.18   87.35  100.94  100.26  113.47  287.03 
+
+datf <- data.frame(x = c(1:length(x)), y = sort(x))
+
+pdf("test2b.pdf")
+library("ggplot2")
+ggplot(data = datf, mapping = aes(x = x, y = y)) +
+  geom_point() +
+  theme_minimal()
+
+x <- rnorm(n = 5000, mean = 100, sd = 58)
+datf <- data.frame(x = c(1:length(x)), y = sort(x))
+
+ggplot(data = datf, mapping = aes(x = x, y = y)) +
+  geom_point() +
+  theme_minimal()
+
+sd(x)
+ 
+[1] 58.35156
+
+summary(x)
+
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+-132.65   62.72  101.69  101.74  141.88  328.68 
+</code>
+
+Graphic output of `normal_gen1`:
+
+<img src = "gen1e.jpg">
+
+Graphic output of `rnorm`:
+
+<img src = "rnorme.jpg">
+
 # Conclusion
 
 Play with the `sub functions` to shape the normal distribution.
-
 
 
 
