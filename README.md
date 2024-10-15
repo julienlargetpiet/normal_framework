@@ -22,6 +22,10 @@ sd(x * 2)
 sd(x) * 2 = sd(x * 2)
 `
 
+Also, if `n_inpt` (see parameters) is too high compared to `sd_inpt` (see parameters), the algorithm does not work.
+
+If, so try to find a lower mean and adjust `sd_inpt` accordingly. (Apply the same methodology seen before, but for lower mean)
+
 ## Functions
 
 `normal_gen1 <- function(
@@ -439,5 +443,5 @@ Graphic output of `rnorm`:
 
 Play with the `sub functions` to shape the normal distribution.
 
-
+In general, if the function takes too much time, it is either that `n_inpt` is too high for `sd` and / or that the sub functions can be improoved.
 
