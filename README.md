@@ -234,6 +234,67 @@ Graphic output of `rnorm`:
 
 <img src = "rnormc.jpg">
 
+### Example 3b
+
+The first sub function equals to `Cnt ** 1.1`
+
+The second sub function equals to `0.35`
+
+<code>
+x <- normal_gen1(n_inpt = 500,
+                  mean_inpt = 100,
+                  sd_inpt = 2,
+                  offset_proba = 0.001,
+                  low_del = 0,
+                  accuracy = 0.05)
+
+length(x)
+
+[1] 1009
+
+sd(x)
+
+[1] 2.034142
+
+summary(x)
+ 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  93.71   98.72  100.09  100.08  101.44  106.66 
+
+datf <- data.frame(x = c(1:length(x)), y = sort(x))
+
+pdf("test2b.pdf")
+library("ggplot2")
+ggplot(data = datf, mapping = aes(x = x, y = y)) +
+  geom_point() +
+  theme_minimal()
+
+x <- rnorm(n = 400, mean = 100, sd = 2)
+datf <- data.frame(x = c(1:length(x)), y = sort(x))
+
+ggplot(data = datf, mapping = aes(x = x, y = y)) +
+  geom_point() +
+  theme_minimal()
+
+sd(x)
+
+[1] 1.935361
+
+summary(x)
+
+  Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  93.29   98.57  100.05   99.97  101.24  106.35 
+</code>
+
+Graphic output of `normal_gen1`:
+
+<img src = "gen1f.jpg">
+
+Graphic output of `rnorm`:
+
+<img src = "rnormf.jpg">
+
+
 ## Unusual shapes
 
 ### Example 4
