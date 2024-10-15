@@ -4,8 +4,6 @@ Framework algorithm to generate a highly customizable normal distribution.
 
 `norml_gen1` is for generating normal distribution whose standard deviation is higher or equal than 1.
 
-`norml_gen2` is for generating normal distribution whose standard deviation is lower or equal than 1.
-
 ## Functions
 
 `normal_gen1 <- function(
