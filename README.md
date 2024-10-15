@@ -1,6 +1,6 @@
 # normal_framework
 
-Two framework algorithms to generate a highly customizable normal distribution.
+Framework algorithm to generate a highly customizable normal distribution.
 
 `norml_gen1` is for generating normal distribution whose standard deviation is higher or equal than 1.
 
@@ -9,16 +9,6 @@ Two framework algorithms to generate a highly customizable normal distribution.
 ## Functions
 
 `normal_gen1 <- function(
-  n_inpt,
-  mean_inpt,
-  sd_inpt,
-  offset_proba = 0.001,
-  low_del = 0,
-  accuracy = 0.05
-)`
-
-
-`normal_gen2 <- function(
   n_inpt,
   mean_inpt,
   sd_inpt,
