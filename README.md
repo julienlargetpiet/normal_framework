@@ -2,7 +2,25 @@
 
 Framework algorithm to generate a highly customizable normal distribution.
 
-`norml_gen1` is for generating normal distribution whose standard deviation is higher or equal than 1.
+`norml_gen1` is for generating normal distribution whose standard deviation is **higher or equal than 1**.
+
+If you want to generate a normal distribution with a standard deviation lower than one, find a mean that **multiplies** the mean of your wanted normal distribution so that its standard deviation is higher than **1**.
+And then, you can divide your outputed vector containing the normal distribution by the factor `input_mean / mean_you_want`
+
+Because,
+
+`x <- c(1, 2)
+
+sd(x)
+
+[1] 0.7071068
+
+sd(x * 2)
+
+[1] 1.414214
+
+sd(x) * 2 = sd(x * 2)
+`
 
 ## Functions
 
