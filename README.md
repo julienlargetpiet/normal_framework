@@ -70,7 +70,7 @@ The same thing can be said about the second sub function, apart that this one mu
 
 ### Explanations
 
-The outputed normal distribution is made of multiples normal distribution having a standard deviation of 1.
+The outputed normal distribution is made of multiples normal distribution having a lower standard deviation and different means.
 
 In fact the first sub function describes how the amount of values that are generated for each normal distribution (always having a standard deviation of 1), at a mean that progressively deviates from `mean_inpt`, evolves.
 
